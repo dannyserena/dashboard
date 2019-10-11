@@ -8,7 +8,7 @@ import { IcecreamService } from './../icecream.service';
 })
 export class DashboardSorveteComponent implements OnInit {
 
-  title = 'Dashboard com Firestore para o Sorvetex';
+
 
   icecreams: any;
   icecreamName: string;
