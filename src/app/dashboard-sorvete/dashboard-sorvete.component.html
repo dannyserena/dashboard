@@ -1,9 +1,9 @@
 <div class="grid-container">
   
-   <!--caixa de seleção para cadastrar novos sorvetes-->
+   <!--Input para cadastrar novos sorvetes-->
     
    <div class="container-input" >     
-      <h1 class="mat-h1">Cadastre a categoria do Sorvetes</h1>
+      <h1 class="mat-h1">Cadastre a categoria do Icecream</h1>
       
       <mat-form-field appearance="outline" class="padding-form">
           <mat-label>Nome</mat-label>
@@ -29,14 +29,13 @@
 
         <div class="container-input" class="button-row">
                   <button mat-raised-button color="warn" type="button" (click)="CreateRecord()" [disabled]="!icecreamName || !icecreamCalories|| !icecreamDescription" class="btn btn-primary">
-                    Cadastrar Sorvete </button>
+                    Cadastrar </button>
         </div>  
    
    </div>
 
-  <mat-grid-list cols="2" rowHeight="250px">  
-
-            
+ <mat-grid-list cols="2" rowHeight="250px">  
+               
   <!--Lista os já criados-->
  <mat-grid-tile *ngFor="let item of icecreams">
      <mat-card class="dashboard-card" *ngIf="!item.isEdit; else elseBlock">
@@ -65,7 +64,7 @@
         
      </mat-card>
      <ng-template #elseBlock>
-        
+        <!-- Edicação de Exclusão do Icecream-->
        <mat-card>
          <mat-form-field appearance="outline" class="padding-form">
              <mat-label>Nome</mat-label>
@@ -93,29 +92,6 @@
  </ng-template>
    </mat-grid-tile> 
  </mat-grid-list>
-</div>
+</div> 
 
-<!--<div class="grid-container">
-  <h1 class="mat-h1">Dashboard</h1>
-  <mat-grid-list cols="2" rowHeight="350px">
-    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
-      <mat-card class="dashboard-card">
-        <mat-card-header>
-          <mat-card-title color="primary">
-            {{card.title}}
-            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-              <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item color="warn">Expandir</button>
-              <button mat-menu-item color="accent">Remover</button>
-            </mat-menu>
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <div>Sorvete de caramelo</div>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
-</div> -->
+

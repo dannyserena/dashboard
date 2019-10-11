@@ -1,15 +1,10 @@
 .sidenav-container {
   height: 100%;
 }
-
 .sidenav {
-  width: 200px;
+  width: 400px;
+  color:white;
 }
-
-.sidenav .mat-toolbar {
-  background: inherit;
-}
-
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
